@@ -1,0 +1,30 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build C with CSFML",
+            "command": "gcc",
+            "args": [
+                "-I/opt/homebrew/Cellar/csfml/2.6.1_1/include",
+                "-L/opt/homebrew/Cellar/csfml/2.6.1_1/lib",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lcsfml-graphics",
+                "-lcsfml-window",
+                "-lcsfml-system",
+                "-lcsfml-audio",
+                "-lcsfml-network"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Hata Ayıklayıcısı tarafından oluşturulan görev."
+        }
+    ],
+    "version": "2.0.0"
+}
